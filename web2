@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediCore | Better Care. Smarter Systems.</title>
+    <meta
+      name="description"
+      content="MediCore is a smart hospital management system connecting care teams, patients, and hospital operations in one modern platform."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#top" class="brand" aria-label="MediCore home">
+          <span class="brand-mark">M</span>
+          <span>MediCore</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#roles">Roles</a>
+          <a href="#operations">Operations</a>
+          <a href="#clinical">Clinical</a>
+          <a href="#billing">Billing</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Switch to dark mode">🌙</button>
+          <button class="btn btn-primary demo-login" type="button">Demo Login</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Better Care. Smarter Systems.</p>
+            <h1>Connected care for every patient, every team.</h1>
+            <p class="lead">
+              Unified hospital operations across admissions, scheduling, pharmacy,
+              laboratory intelligence, billing, and clinical decision support.
+            </p>
+
+            <div class="cta-row">
+              <button class="btn btn-primary" type="button">Access dashboard</button>
+              <button class="btn btn-secondary" type="button">View workflow</button>
+            </div>
+
+            <ul class="hero-highlights">
+              <li>24/7 patient visibility</li>
+              <li>Role-based clinical access</li>
+              <li>Operational performance insights</li>
+            </ul>
+          </div>
+
+          <div class="hero-panel" aria-label="Hospital overview panel">
+            <div class="dashboard-window">
+              <div class="window-header">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+                <span class="window-title">Today’s operations</span>
+              </div>
+
+              <div class="mini-metrics">
+                <div class="mini-stat">
+                  <span>Patients</span>
+                  <strong>1,284</strong>
+                </div>
+                <div class="mini-stat">
+                  <span>Admissions</span>
+                  <strong>27</strong>
+                </div>
+                <div class="mini-stat accent">
+                  <span>Revenue</span>
+                  <strong>$92.4k</strong>
+                </div>
+              </div>
+
+              <div class="chart-bars" aria-label="Daily operations chart">
+                <span style="--bar-height: 42%"></span>
+                <span style="--bar-height: 58%"></span>
+                <span style="--bar-height: 48%"></span>
+                <span style="--bar-height: 70%"></span>
+                <span style="--bar-height: 82%"></span>
+                <span style="--bar-height: 64%"></span>
+                <span style="--bar-height: 90%"></span>
+                <span style="--bar-height: 74%"></span>
+              </div>
+
+              <div class="activity-list">
+                <div class="activity-item">
+                  <span class="activity-dot success"></span>
+                  <div>
+                    <strong>Discharge approved</strong>
+                    <small>Ward A • 09:18 AM</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-dot warning"></span>
+                  <div>
+                    <strong>Lab results verified</strong>
+                    <small>ICU • 09:02 AM</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-dot alert"></span>
+                  <div>
+                    <strong>Critical alert escalated</strong>
+                    <small>ER • 08:41 AM</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats container" aria-label="Key statistics">
+        <div class="stat-item">
+          <strong>2,480</strong>
+          <span>Registered patients</span>
+        </div>
+        <div class="stat-item">
+          <strong>186</strong>
+          <span>Doctors on duty</span>
+        </div>
+        <div class="stat-item">
+          <strong>94%</strong>
+          <span>Bed utilization</span>
+        </div>
+        <div class="stat-item">
+          <strong>98.6%</strong>
+          <span>Care satisfaction</span>
+        </div>
+      </section>
+
+      <section id="roles" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Role-aware access</p>
+            <h2>Built for every clinical role in the hospital.</h2>
+          </div>
+
+          <div class="role-switcher" aria-label="Select hospital role">
+            <button class="role-btn active" type="button" data-role="admin">Hospital admin</button>
+            <button class="role-btn" type="button" data-role="doctor">Doctor</button>
+            <button class="role-btn" type="button" data-role="nurse">Nurse</button>
+            <button class="role-btn" type="button" data-role="receptionist">Receptionist</button>
+            <button class="role-btn" type="button" data-role="pharmacist">Pharmacist</button>
+            <button class="role-btn" type="button" data-role="lab">Lab tech</button>
+            <button class="role-btn" type="button" data-role="patient">Patient</button>
+          </div>
+
+          <div class="role-panel">
+            <div class="role-detail" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Operations overview</p>
+            <h2>Hospital intelligence, visible in real time.</h2>
+          </div>
+
+          <div class="overview-grid">
+            <article class="panel panel-large">
+              <div class="panel-header-row">
+                <div>
+                  <p class="mini-label">Performance</p>
+                  <h3>Today’s care throughput</h3>
+                </div>
+                <span class="status-badge positive">+12.4% vs last week</span>
+              </div>
+
+              <div class="metric-cards">
+                <div class="metric-box">
+                  <span>Appointments</span>
+                  <strong>428</strong>
+                  <small>Scheduled today</small>
+                </div>
+                <div class="metric-box">
+                  <span>Pending reports</span>
+                  <strong>58</strong>
+                  <small>Across labs</small>
+                </div>
+                <div class="metric-box">
+                  <span>Outstanding invoices</span>
+                  <strong>$27.6k</strong>
+                  <small>14 accounts</small>
+                </div>
+              </div>
+
+              <div class="line-chart" aria-label="Revenue and visits chart">
+                <div class="gridline"></div>
+                <div class="gridline"></div>
+                <div class="gridline"></div>
+                <svg viewBox="0 0 620 220" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M0 170 C 80 150, 100 120, 170 130 S 260 50, 350 90 S 470 95, 620 38" />
+                  <path class="secondary" d="M0 180 C 100 165, 140 150, 210 160 S 320 110, 420 122 S 540 90, 620 70" />
+                </svg>
+              </div>
+            </article>
+
+            <aside class="panel activity-panel">
+              <div class="panel-header-row">
+                <div>
+                  <p class="mini-label">Live feed</p>
+                  <h3>Activity log</h3>
+                </div>
+              </div>
+
+              <ul class="activity-feed">
+                <li>
+                  <span class="marker green"></span>
+                  <div>
+                    <strong>Patient registration</strong>
+                    <small>Mr. Arjun Patel admitted to ICU</small>
+                  </div>
+                </li>
+                <li>
+                  <span class="marker blue"></span>
+                  <div>
+                    <strong>Appointment booked</strong>
+                    <small>Cardiology follow-up for 2:30 PM</small>
+                  </div>
+                </li>
+                <li>
+                  <span class="marker amber"></span>
+                  <div>
+                    <strong>Invoice generated</strong>
+                    <small>Patient ID P-2048 settled partial payment</small>
+                  </div>
+                </li>
+                <li>
+                  <span class="marker red"></span>
+                  <div>
+                    <strong>Critical lab result</strong>
+                    <small>Hemoglobin marked as urgent review</small>
+                  </div>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="operations" class="section">
+        <div class="container operations-layout">
+          <div class="panel table-panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Patient registry</p>
+                <h3>Active patient list</h3>
+              </div>
+              <button class="btn btn-tertiary" type="button">Add patient</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Patient</th>
+                  <th>Doctor</th>
+                  <th>Ward</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Emma Lewis</td>
+                  <td>Dr. N. Shah</td>
+                  <td>Ward B</td>
+                  <td><span class="status-pill success">Stable</span></td>
+                </tr>
+                <tr>
+                  <td>Rohit Menon</td>
+                  <td>Dr. K. Iyer</td>
+                  <td>ICU</td>
+                  <td><span class="status-pill warning">Monitoring</span></td>
+                </tr>
+                <tr>
+                  <td>Priya Raman</td>
+                  <td>Dr. A. Singh</td>
+                  <td>Ward C</td>
+                  <td><span class="status-pill info">Discharge prep</span></td>
+                </tr>
+                <tr>
+                  <td>David Ortiz</td>
+                  <td>Dr. M. Rao</td>
+                  <td>ER</td>
+                  <td><span class="status-pill alert">Critical</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel queue-panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Queue management</p>
+                <h3>Today’s appointment queue</h3>
+              </div>
+            </div>
+
+            <div class="queue-list">
+              <div class="queue-item">
+                <div>
+                  <strong>10:00 AM</strong>
+                  <small>Cardiology</small>
+                </div>
+                <span class="queue-tag checked">Checked in</span>
+              </div>
+              <div class="queue-item">
+                <div>
+                  <strong>10:30 AM</strong>
+                  <small>General medicine</small>
+                </div>
+                <span class="queue-tag waiting">Waiting</span>
+              </div>
+              <div class="queue-item">
+                <div>
+                  <strong>11:15 AM</strong>
+                  <small>Pediatrics</small>
+                </div>
+                <span class="queue-tag confirm">Confirmed</span>
+              </div>
+              <div class="queue-item">
+                <div>
+                  <strong>12:00 PM</strong>
+                  <small>Neurology</small>
+                </div>
+                <span class="queue-tag consult">In consultation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clinical" class="section alt-bg">
+        <div class="container clinical-grid">
+          <article class="panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Consultation</p>
+                <h3>Doctor workspace</h3>
+              </div>
+              <span class="status-badge neutral">Draft saved</span>
+            </div>
+
+            <div class="consultation-header">
+              <div>
+                <strong>Jane Roberts</strong>
+                <small>Patient ID: P-2407</small>
+              </div>
+              <span class="status-pill info">Follow-up</span>
+            </div>
+
+            <div class="clinical-form">
+              <div class="field-group">
+                <label>Symptoms</label>
+                <p>Chest discomfort, dizziness, fatigue over 3 days.</p>
+              </div>
+              <div class="field-group">
+                <label>Assessment</label>
+                <p>Possible cardiovascular strain; monitor vitals and ECG readings.</p>
+              </div>
+              <div class="field-group">
+                <label>Treatment plan</label>
+                <p>Repeat blood panel, continue rest protocol, diagnostic imaging if symptoms persist.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Ward operations</p>
+                <h3>Bed board</h3>
+              </div>
+            </div>
+
+            <div class="bed-board">
+              <div class="bed-item occupied"><span>ICU-01</span><small>Occupied</small></div>
+              <div class="bed-item available"><span>Ward A-08</span><small>Available</small></div>
+              <div class="bed-item reserved"><span>Ward B-03</span><small>Reserved</small></div>
+              <div class="bed-item cleaning"><span>Ward C-11</span><small>Cleaning</small></div>
+              <div class="bed-item available"><span>Ward A-10</span><small>Available</small></div>
+              <div class="bed-item occupied"><span>ICU-04</span><small>Occupied</small></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container module-grid">
+          <article class="panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Pharmacy</p>
+                <h3>Inventory watchlist</h3>
+              </div>
+              <button class="btn btn-tertiary" type="button">Review stock</button>
+            </div>
+
+            <div class="module-list">
+              <div class="module-item">
+                <div>
+                  <strong>Amoxicillin 500mg</strong>
+                  <small>Stock: 18 packs • Reorder threshold: 40</small>
+                </div>
+                <span class="status-pill warning">Low stock</span>
+              </div>
+              <div class="module-item">
+                <div>
+                  <strong>Insulin Glargine</strong>
+                  <small>Batch expiring in 21 days • 7 units left</small>
+                </div>
+                <span class="status-pill alert">Critical</span>
+              </div>
+              <div class="module-item">
+                <div>
+                  <strong>Paracetamol 650mg</strong>
+                  <small>Stock: 220 packs • Forecast stable</small>
+                </div>
+                <span class="status-pill success">Healthy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Laboratory</p>
+                <h3>Sample tracking</h3>
+              </div>
+              <button class="btn btn-tertiary" type="button">Open queue</button>
+            </div>
+
+            <div class="module-list">
+              <div class="module-item">
+                <div>
+                  <strong>HbA1C</strong>
+                  <small>Sample status: Processing • Priority: High</small>
+                </div>
+                <span class="status-pill info">In progress</span>
+              </div>
+              <div class="module-item">
+                <div>
+                  <strong>Complete blood count</strong>
+                  <small>QC approved • Report ready for review</small>
+                </div>
+                <span class="status-pill success">Completed</span>
+              </div>
+              <div class="module-item">
+                <div>
+                  <strong>Troponin I</strong>
+                  <small>Critical result • Escalated to physician</small>
+                </div>
+                <span class="status-pill alert">Critical</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="billing" class="section alt-bg billing-section">
+        <div class="container billing-grid">
+          <div class="panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Billing & finance</p>
+                <h3>Revenue breakdown</h3>
+              </div>
+            </div>
+
+            <div class="billing-split">
+              <div class="donut-wrap">
+                <div class="donut-chart">
+                  <div class="donut-center">
+                    <strong>$92.4k</strong>
+                    <small>Collected</small>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="billing-list">
+                <li><span class="legend teal"></span> Consultation <strong>$38k</strong></li>
+                <li><span class="legend navy"></span> Pharmacy <strong>$23k</strong></li>
+                <li><span class="legend mint"></span> Lab <strong>$19k</strong></li>
+                <li><span class="legend amber"></span> Room & care <strong>$12.4k</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel invoice-panel">
+            <div class="panel-header-row">
+              <div>
+                <p class="mini-label">Invoices</p>
+                <h3>Pending collections</h3>
+              </div>
+            </div>
+
+            <div class="invoice-row">
+              <div>
+                <strong>INV-4821</strong>
+                <small>Neha Kapoor</small>
+              </div>
+              <span>$2,140</span>
+            </div>
+            <div class="invoice-row">
+              <div>
+                <strong>INV-4827</strong>
+                <small>Jacob Lee</small>
+              </div>
+              <span>$980</span>
+            </div>
+            <div class="invoice-row">
+              <div>
+                <strong>INV-4830</strong>
+                <small>Rina Bose</small>
+              </div>
+              <span>$1,430</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <a href="#top" class="brand footer-brand" aria-label="MediCore home">
+            <span class="brand-mark">M</span>
+            <span>MediCore</span>
+          </a>
+          <p>Smart hospital operations for better care delivery, stronger outcomes, and calmer teams.</p>
+        </div>
+        <div>
+          <h4>Fast access</h4>
+          <ul>
+            <li>Patients</li>
+            <li>Doctors</li>
+            <li>Pharmacy</li>
+            <li>Labs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li>Care coordination</li>
+            <li>Claims review</li>
+            <li>Emergency response</li>
+            <li>System status</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> MediCore</span>
+        <span>Better Care. Smarter Systems.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

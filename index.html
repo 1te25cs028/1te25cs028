@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediNova | Smart Healthcare, Seamlessly Connected</title>
+    <meta
+      name="description"
+      content="MediNova is a smart hospital management system for patient care, staff operations, lab workflows, pharmacy inventory, billing, and AI-enabled clinical support."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="appShell">
+      <section id="loginScreen" class="auth-screen active">
+        <div class="auth-layout">
+          <div class="auth-hero">
+            <div class="brand-block">
+              <div class="logo-mark" aria-label="MediNova logo">
+                <span class="cross"></span>
+                <span class="pulse"></span>
+              </div>
+              <div>
+                <span class="brand-kicker">MediNova</span>
+                <h1>Smart Healthcare, Seamlessly Connected</h1>
+              </div>
+            </div>
+
+            <div class="feature-stack">
+              <div class="feature-card">
+                <strong>4.8/5 care experience</strong>
+                <span>Trusted by 126 care teams</span>
+              </div>
+              <div class="feature-card">
+                <strong>184 live cases</strong>
+                <span>Across admissions and triage</span>
+              </div>
+              <div class="feature-card">
+                <strong>AI-powered flow</strong>
+                <span>Clinical insights in one place</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="auth-panel">
+            <div class="auth-header">
+              <p class="eyebrow">Demo sign in</p>
+              <h2>Welcome back</h2>
+              <p class="page-subtitle">This demo does not connect to an authentication service. Do not enter real credentials or patient data.</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+              <label class="field">
+                <span>Email</span>
+                <input id="emailInput" type="email" value="admin@medinova.health" placeholder="name@hospital.com" required />
+              </label>
+
+              <label class="field">
+                <span>Password</span>
+                <div class="password-wrap">
+                  <input id="passwordInput" type="password" placeholder="Enter your password" required />
+                  <button class="icon-button" type="button" data-action="toggle-password" aria-label="Toggle password visibility">Show</button>
+                </div>
+              </label>
+
+              <div class="row row-between">
+                <label class="checkbox-wrap">
+                  <input type="checkbox" checked />
+                  <span>Remember me</span>
+                </label>
+                <button class="link-button" type="button" data-action="forgot-password">Forgot password?</button>
+              </div>
+
+              <div id="loginError" class="form-message error" hidden></div>
+
+              <button class="primary-btn wide" type="submit">Sign in</button>
+            </form>
+
+            <div class="demo-roles">
+              <p>Demo access</p>
+              <div class="demo-role-grid">
+                <button class="demo-role active" type="button" data-role="admin">Admin</button>
+                <button class="demo-role" type="button" data-role="doctor">Doctor</button>
+                <button class="demo-role" type="button" data-role="nurse">Nurse</button>
+                <button class="demo-role" type="button" data-role="receptionist">Reception</button>
+                <button class="demo-role" type="button" data-role="pharmacist">Pharmacist</button>
+                <button class="demo-role" type="button" data-role="lab">Lab</button>
+                <button class="demo-role" type="button" data-role="billing">Billing</button>
+                <button class="demo-role" type="button" data-role="patient">Patient</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="workspace" class="workspace hidden">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <div class="logo-mark small" aria-label="MediNova logo">
+              <span class="cross"></span>
+              <span class="pulse"></span>
+            </div>
+            <div>
+              <strong>MediNova</strong>
+              <small>Care OS</small>
+            </div>
+          </div>
+
+          <nav class="nav-menu" aria-label="Sidebar navigation">
+            <button class="nav-item active" type="button" data-view="overview">
+              <span>Overview Dashboard</span>
+            </button>
+            <button class="nav-item" type="button" data-view="patients">
+              <span>Patients</span>
+            </button>
+            <button class="nav-item" type="button" data-view="doctors">
+              <span>Doctors &amp; Staff</span>
+            </button>
+            <button class="nav-item" type="button" data-view="appointments">
+              <span>Appointments</span>
+            </button>
+            <button class="nav-item" type="button" data-view="departments">
+              <span>Departments</span>
+            </button>
+            <button class="nav-item" type="button" data-view="emr">
+              <span>Electronic Medical Records</span>
+            </button>
+            <button class="nav-item" type="button" data-view="lab">
+              <span>Laboratory &amp; Diagnostics</span>
+            </button>
+            <button class="nav-item" type="button" data-view="pharmacy">
+              <span>Pharmacy &amp; Inventory</span>
+            </button>
+            <button class="nav-item" type="button" data-view="admissions">
+              <span>Beds &amp; Admissions</span>
+            </button>
+            <button class="nav-item" type="button" data-view="billing">
+              <span>Billing &amp; Payments</span>
+            </button>
+            <button class="nav-item" type="button" data-view="emergency">
+              <span>Emergency &amp; Triage</span>
+            </button>
+            <button class="nav-item" type="button" data-view="ai">
+              <span>AI Health Assistant</span>
+            </button>
+            <button class="nav-item" type="button" data-view="reports">
+              <span>Reports &amp; Analytics</span>
+            </button>
+            <button class="nav-item" type="button" data-view="settings">
+              <span>Settings</span>
+            </button>
+          </nav>
+        </aside>
+
+        <main class="main-panel">
+          <header class="topbar">
+            <div class="header-left">
+              <button class="icon-button mobile-toggle" type="button" data-action="toggle-sidebar" aria-label="Toggle sidebar">☰</button>
+              <div class="search-wrap">
+                <span>⌕</span>
+                <input id="globalSearch" type="search" placeholder="Search patients, doctors, reports..." />
+              </div>
+            </div>
+
+            <div class="header-actions">
+              <button class="icon-button" type="button" data-action="toggle-theme" aria-label="Toggle theme">☀️</button>
+              <div class="notification-wrap">
+                <button class="icon-button" type="button" data-action="open-notifications" aria-label="Notifications">🔔</button>
+                <span class="notification-badge">7</span>
+              </div>
+              <div class="profile-menu">
+                <div class="avatar">AS</div>
+                <div>
+                  <strong id="profileName">Alicia Stone</strong>
+                  <small id="profileRole">Hospital Administrator</small>
+                </div>
+                <button class="icon-button" type="button" data-action="toggle-profile" aria-label="Toggle profile menu">▾</button>
+              </div>
+              <button class="ghost-btn" type="button" data-action="logout">Logout</button>
+            </div>
+          </header>
+
+          <div id="pageContent" class="page-content"></div>
+        </main>
+      </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+    <div id="modalContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
